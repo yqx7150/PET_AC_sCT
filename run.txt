@@ -1,0 +1,3 @@
+python test.py --task=1to1 --out_path="./results/exp/" --root2='./data_for_test/pet_mat' --root3='./data_for_test/pet_mat' --root1='./data_for_test/ct_mat' --ckpt="./results/exp/1to1/checkpoint/0028.pth"
+
+python train_lr.py --task=1to1 --out_path="./results/new_exp/" --root2='./data_for_training/pet_mat' --root3='./data_for_training/pet_mat' --root1='./data_for_training/ct_mat'
