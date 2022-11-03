@@ -1,0 +1,12 @@
+{
+  "task": "1to1",
+  "batch_size": 1,
+  "weight": 1,
+  "out_path": "./results/exp/",
+  "root1": "./data_for_training/ct_mat",
+  "root2": "./data_for_training/pet_mat",
+  "root3": "./data_for_training/pet_mat",
+  "resume": false,
+  "loss": "L2",
+  "lr": 0.0001
+}
