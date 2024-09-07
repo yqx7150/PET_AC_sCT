@@ -1,5 +1,5 @@
 # PET_AC_sCT
-Synthetic CT Generation via Invertible Network for All-digital Brain PET Attenuation Correction
+Synthetic CT Generation via Variant Invertible Network for Brain PET Attenuation Correction
 
 
 # Abstract
