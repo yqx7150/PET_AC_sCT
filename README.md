@@ -1,8 +1,8 @@
 # PET_AC_sCT
 
-**Paper**: Synthetic CT Generation via Variant Invertible Network for Brain PET Attenuation Correction 
+**Paper**:   Synthetic CT Generation via Variant Invertible Network for Brain PET Attenuation Correction 
 
-**Authors**:Yu Guan, Bohui Shen, Shirui Jiang, Xinchong Shi, Xiangsong Zhang, Bingxuan Li, Qiegen Liu*       
+**Authors**:   Yu Guan, Bohui Shen, Shirui Jiang, Xinchong Shi, Xiangsong Zhang, Bingxuan Li, Qiegen Liu*       
  
 IEEE Transactions on Radiation and Plasma Medical Sciences    
 
@@ -19,12 +19,12 @@ Attenuation correction (AC) is essential for the generation of artifact-free and
 
 ## Graphical representation
  <div align="center"><img src="https://github.com/yqx7150/PET_AC_sCT/blob/main/samples/figure 1.png" width = "1000" height = "550">  </div>
-
 The schematic flow diagram of the proposed method. The training phase is first performed with NAC PET and reference CT images, after which the well-trained network is fixed and ready for generating synthetic CT images for new PET data in the reconstruction phase.
 
-<div align="center"><img src="https://github.com/yqx7150/PET_AC_sCT/blob/main/samples/Fig 3.png" width = "1000" height = "550"> </div>
 
+<div align="center"><img src="https://github.com/yqx7150/PET_AC_sCT/blob/main/samples/Fig 3.png" width = "1000" height = "550"> </div>
 The pipeline of IVNAC. Invertible model is composed of both forward and inverse process. We illustrate the details of the invertible block on the bottom. s , t and r are transformations defined in the bijective functions.
+
 
 ## Training Demo
 ```bash
@@ -37,16 +37,20 @@ python test.py --task=1to1 --out_path="./results/exp/" --root2='./data_for_test/
 ## Checkpoints
 We provide a pretrained checkpoint. You can run the above command to use the pretrained model directly
 
+
 ## Synthetic CT Generation and Evaluation.
 <div align="center"><img src="https://github.com/yqx7150/PET_AC_sCT/blob/main/samples/figure 5.png" width = "1000" height = "1200"> </div>
 Examples of synthetic CT image on a patient’s brain. Five columns from left to right are NAC-PET, reference-CT, Cycle-GAN-CT, Pix2pix-CT and IVNAC-CT, respectively. The second row shows the difference images between the reference CT and the synthetic CT.
+
 
 ## Synthetic CT to PET Attenuation Correction.
 <div align="center"><img src="https://github.com/yqx7150/PET_AC_sCT/blob/main/samples/figure 6.png" width = "1000" height = "1200"> </div>
 PET data reconstructed with reference and generated synthesized CT images alongside their voxel-wise difference map. Five columns from left to right are reference-CT, AC-PET, Cycle-GAN-PET, Pix2pix-PET and IVNAC-PET, respectively.
 
+
 <div align="center"><img src="https://github.com/yqx7150/PET_AC_sCT/blob/main/samples/figure 7.png" width = "1000" height = "450"> </div>
 Unique example of PET data reconstructed with reference and generated synthesized CT images alongside their voxel-wise difference map. Red arrows indicate region with relatively obvious details and textures and the intensity of residual maps is two times magnified.
+
 
 ### Other Related Projects
 
