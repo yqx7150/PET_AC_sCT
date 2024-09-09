@@ -36,11 +36,11 @@ python test.py --task=1to1 --out_path="./results/exp/" --root2='./data_for_test/
 We provide a pretrained checkpoint. You can run the above command to use the pretrained model directly
 
 ## Synthetic CT Generation and Evaluation.
-<div align="center"><img src="https://github.com/yqx7150/CM-DM/blob/main/samples/figure 5.png" width = "1000" height = "450"> </div>
+<div align="center"><img src="https://github.com/yqx7150/CM-DM/blob/main/samples/figure 5.png" width = "1000" height = "600"> </div>
 Examples of synthetic CT image on a patient’s brain. Five columns from left to right are NAC-PET, reference-CT, Cycle-GAN-CT, Pix2pix-CT and IVNAC-CT, respectively. The second row shows the difference images between the reference CT and the synthetic CT.
 
 ## Synthetic CT to PET Attenuation Correction.
-<div align="center"><img src="https://github.com/yqx7150/CM-DM/blob/main/samples/figure 6.png" width = "1000" height = "450"> </div>
+<div align="center"><img src="https://github.com/yqx7150/CM-DM/blob/main/samples/figure 6.png" width = "1000" height = "600"> </div>
 PET data reconstructed with reference and generated synthesized CT images alongside their voxel-wise difference map. Five columns from left to right are reference-CT, AC-PET, Cycle-GAN-PET, Pix2pix-PET and IVNAC-PET, respectively.
 
 <div align="center"><img src="https://github.com/yqx7150/CM-DM/blob/main/samples/figure 7.png" width = "1000" height = "450"> </div>
