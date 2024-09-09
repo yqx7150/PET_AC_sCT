@@ -1,5 +1,7 @@
 # PET_AC_sCT
+
 **Paper**: Synthetic CT Generation via Variant Invertible Network for Brain PET Attenuation Correction 
+
 **Authors**:Yu Guan, Bohui Shen, Shirui Jiang, Xinchong Shi, Xiangsong Zhang, Bingxuan Li, Qiegen Liu*       
  
 IEEE Transactions on Radiation and Plasma Medical Sciences    
