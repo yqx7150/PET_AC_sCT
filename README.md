@@ -1,12 +1,28 @@
 # PET_AC_sCT
-Synthetic CT Generation via Variant Invertible Network for Brain PET Attenuation Correction     
-Yu Guan, Bohui Shen, Shirui Jiang, Xinchong Shi, Xiangsong Zhang, Bingxuan Li, Qiegen Liu    
-IEEE Transactions on Radiation and Plasma Medical Sciences      
+**Paper**: Synthetic CT Generation via Variant Invertible Network for Brain PET Attenuation Correction 
+**Authors**:Yu Guan, Bohui Shen, Shirui Jiang, Xinchong Shi, Xiangsong Zhang, Bingxuan Li, Qiegen Liu*       
+ 
+IEEE Transactions on Radiation and Plasma Medical Sciences    
+
 https://ieeexplore.ieee.org/document/10666843  
 
-# Abstract
-Attenuation correction (AC) is essential for the generation of artifact-free and quantitatively accurate posi-tron emission tomography (PET) images. However, AC of PET faces challenges including inter-scan motion, image artifacts such as truncation or distortion, and erroneous transformation of structural voxel-intensities to PET attenuation-correction factors. Nowadays, the problem of AC for quantitative PET had been solved to a large extent after the commercial availability of devices combining PET with computed tomography (CT). Meanwhile, considering the feasibility of a deep learning approach for PET AC without anatomical imaging, this paper develops a PET AC method, which uses deep learning to generate continuously valued CT images from non-attenuation corrected PET images for AC on brain PET imaging. Specifically, an invertible network combined with a variable augmentation strategy that can achieve the bidirectional inference processes is pro-posed for synthetic CT generation (IVNAC). In addition, data collection for training and evaluation of the pro-posed method is performed utilizing an all-digital PET, which further guarantees the high quality of the NAC PET dataset compared to traditional PET. Perceptual analysis and quantitative evaluations illustrate that the invertible network for PET AC outperforms other existing AC models. Furthermore, with the proposed method shows great similarity to reference CT images both qualitatively and quantitatively, which demonstrates great potential for brain PET AC in the absence of structural information.
+Date : 9-September-2024  
+Version : 1.0  
+The code and the algorithm are for non-comercial use only.  
+Copyright 2024, School of Mathematics and Computer Sciences, Nanchang University.  
 
+# Abstract
+Attenuation correction (AC) is essential for the generation of artifact-free and quan-titatively accurate positron emission tomography (PET) images. Nowadays, deep-learning-based methods have been extensively applied to PET AC tasks, yielding promising results. Therefore, this paper develops an innovative approach to generate continuously valued CT images from non-attenuation corrected PET images for AC on brain PET imaging. Specifically, an invertible neural network combined with the variable augmentation strategy that can achieve the bidirectional inference processes is proposed for synthetic CT generation. On the one hand, invertible architecture ensures a bijective mapping between the PET and synthetic CT image spaces, which can potentially improve the robustness of the prediction and provide a way to validate the synthetic CT by checking the consistency of the inverse mapping. On the other hand, the variable augmentation strategy enriches the training process and leverages the intrinsic data properties more effectively. Therefore, the combination provides for superior performance in PET AC by preserving information throughout the network and by better handling of the data variability inherent PET AC. To evaluate the performance of the proposed algorithm, we conducted a comprehensive study on a total of 1480 2D slices from 37 whole-body 18F-FDG clinical patients using comparative algorithms (such as Cycle-GAN and Pix2pix). Perceptual analysis and quantitative evaluations illustrate that the invertible network for PET AC outperforms other existing AC models, which demonstrates the feasibility of achieving brain PET AC without additional anatomical information.
+
+
+## Graphical representation
+ <div align="center"><img src="https://github.com/yqx7150/CM-DM/blob/main/samples/figure 1.png" width = "1000" height = "450">  </div>
+
+The schematic flow diagram of the proposed method. The training phase is first performed with NAC PET and reference CT images, after which the well-trained network is fixed and ready for generating synthetic CT images for new PET data in the reconstruction phase.
+
+<div align="center"><img src="https://github.com/yqx7150/CM-DM/blob/main/samples/Fig 3.png" width = "1000" height = "450"> </div>
+
+The pipeline of IVNAC. Invertible model is composed of both forward and inverse process. We illustrate the details of the invertible block on the bottom. s , t and r are transformations defined in the bijective functions.
 
 ## Training Demo
 ```bash
@@ -18,6 +34,17 @@ python test.py --task=1to1 --out_path="./results/exp/" --root2='./data_for_test/
 ```
 ## Checkpoints
 We provide a pretrained checkpoint. You can run the above command to use the pretrained model directly
+
+## Synthetic CT Generation and Evaluation.
+<div align="center"><img src="https://github.com/yqx7150/CM-DM/blob/main/samples/figure 5.png" width = "1000" height = "450"> </div>
+Examples of synthetic CT image on a patient’s brain. Five columns from left to right are NAC-PET, reference-CT, Cycle-GAN-CT, Pix2pix-CT and IVNAC-CT, respectively. The second row shows the difference images between the reference CT and the synthetic CT.
+
+## Synthetic CT to PET Attenuation Correction.
+<div align="center"><img src="https://github.com/yqx7150/CM-DM/blob/main/samples/figure 6.png" width = "1000" height = "450"> </div>
+PET data reconstructed with reference and generated synthesized CT images alongside their voxel-wise difference map. Five columns from left to right are reference-CT, AC-PET, Cycle-GAN-PET, Pix2pix-PET and IVNAC-PET, respectively.
+
+<div align="center"><img src="https://github.com/yqx7150/CM-DM/blob/main/samples/figure 7.png" width = "1000" height = "450"> </div>
+Unique example of PET data reconstructed with reference and generated synthesized CT images alongside their voxel-wise difference map. Red arrows indicate region with relatively obvious details and textures and the intensity of residual maps is two times magnified.
 
 ### Other Related Projects
 
