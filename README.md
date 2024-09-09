@@ -19,7 +19,7 @@ Attenuation correction (AC) is essential for the generation of artifact-free and
 
 ## Graphical representation
  <div align="center"><img src="https://github.com/yqx7150/PET_AC_sCT/blob/main/samples/figure 1.png" width = "1000" height = "520">  </div>
- **The schematic flow diagram of the proposed method. The training phase is first performed with NAC PET and reference CT images, after which the well-trained network is fixed and ready for generating synthetic CT images for new PET data in the reconstruction phase.**
+ The schematic flow diagram of the proposed method. The training phase is first performed with NAC PET and reference CT images, after which the well-trained network is fixed and ready for generating synthetic CT images for new PET data in the reconstruction phase.
  
 
 <div align="center"><img src="https://github.com/yqx7150/PET_AC_sCT/blob/main/samples/Fig 3.png" width = "1000" height = "520"> </div>
