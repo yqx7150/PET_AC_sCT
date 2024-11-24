@@ -53,8 +53,8 @@ We provide a pretrained checkpoint. You can run the above command to use the pre
 
 
 ### Other Related Projects
-<div align="center"><img src="https://github.com/yqx7150/PET_AC_sCT/blob/main/samples/algorithm-overview.png" width = "800" height = "400"> </div>
- Some examples of invertible and variable augmented network.
+<div align="center"><img src="https://github.com/yqx7150/PET_AC_sCT/blob/main/samples/algorithm-overview.png" width = "800" height = "500"> </div>
+ Some examples of invertible and variable augmented network: IVNAC, VAN-ICC, iVAN and DTS-INN.
 
   * Variable Augmented Network for Invertible Modality Synthesis and Fusion  [<font size=5>**[Paper]**</font>](https://ieeexplore.ieee.org/abstract/document/10070774)   [<font size=5>**[Code]**</font>](https://github.com/yqx7150/iVAN)    
   
